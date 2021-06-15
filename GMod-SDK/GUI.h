@@ -101,13 +101,14 @@ void DrawVisuals()
 
 			InsertCheckbox("Bounding box", Settings::ESP::espBoundingBox);
 			InsertColorPicker("##Bounding box color", Settings::ESP::espBoundingBoxColor.fCol, false);
+			InsertCheckbox("Aimbot target color", Settings::ESP::espAimbotTarget);
+			InsertColorPicker("##Aimbot target color", Settings::ESP::espAimbotTargetColor.fCol, false);
 
 			InsertCombo("Bouding Box Shape", Settings::ESP::espShapeInt, espShape);
 			InsertCheckbox("Dormant", Settings::ESP::espDormant);
 			InsertCheckbox("Health", Settings::ESP::espHealthBar);
 
 			InsertCheckbox("Name", Settings::ESP::espName);
-			InsertColorPicker("##Bounding box target color", Settings::ESP::espBoundingBoxColorTarget.fCol, false);
 
 			InsertCheckbox("Weapon name", Settings::ESP::weaponText);
 

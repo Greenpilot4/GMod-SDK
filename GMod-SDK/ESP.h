@@ -80,7 +80,7 @@ void doEsp()
 						Vector parentBonePos;
 						if (!WorldToScreen(normalBonePos, bonePosFrom) || !WorldToScreen(normalParentBonePos, parentBonePos))
 							continue;
-						DrawLine(bonePosFrom, parentBonePos, D3DCOLOR_ARGB((uint8_t)(Settings::ESP::skeletonEspColor.fCol[3] * 255), (uint8_t)(Settings::ESP::skeletonEspColor.fCol[0] * 255), (uint8_t)(Settings::ESP::skeletonEspColor.fCol[1] * 255), (uint8_t)(Settings::ESP::skeletonEspColor.fCol[2] * 255)));
+						DrawLine(bonePosFrom, parentBonePos, D3DCOLOR_ARGB(entity == Settings::Aimbot::finalTarget && Settings::ESP::espAimbotTarget ? (uint8_t)(Settings::ESP::espAimbotTargetColor.fCol[3] * 255) : (uint8_t)(Settings::ESP::skeletonEspColor.fCol[3] * 255), entity == Settings::Aimbot::finalTarget && Settings::ESP::espAimbotTarget ? (uint8_t)(Settings::ESP::espAimbotTargetColor.fCol[0] * 255) : (uint8_t)(Settings::ESP::skeletonEspColor.fCol[0] * 255), entity == Settings::Aimbot::finalTarget && Settings::ESP::espAimbotTarget ? (uint8_t)(Settings::ESP::espAimbotTargetColor.fCol[1] * 255) : (uint8_t)(Settings::ESP::skeletonEspColor.fCol[1] * 255), entity == Settings::Aimbot::finalTarget && Settings::ESP::espAimbotTarget ? (uint8_t)(Settings::ESP::espAimbotTargetColor.fCol[2] * 255) : (uint8_t)(Settings::ESP::skeletonEspColor.fCol[2] * 255)));
 						//DrawTextW(bonePosFrom, std::to_wstring(z), 0xFFFFFFFF, true); // write bone ids
 					}
 				}
@@ -151,7 +151,7 @@ void doEsp()
 				if (Settings::ESP::espBoundingBox)
 				{
 					if (Settings::ESP::espShapeInt == 0)
-						DrawEsp2D(hisBottom, hisHeadPos, D3DCOLOR_ARGB(entity == Settings::Aimbot::finalTarget ? (uint8_t)(Settings::ESP::espBoundingBoxColorTarget.fCol[3] * 255) : (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[3] * 255), entity == Settings::Aimbot::finalTarget ? (uint8_t)(Settings::ESP::espBoundingBoxColorTarget.fCol[0] * 255) : (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[0] * 255), (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[1] * 255), entity == Settings::Aimbot::finalTarget ? (uint8_t)(Settings::ESP::espBoundingBoxColorTarget.fCol[2] * 255) : (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[2] * 255)));
+						DrawEsp2D(hisBottom, hisHeadPos, D3DCOLOR_ARGB(entity == Settings::Aimbot::finalTarget && Settings::ESP::espAimbotTarget ? (uint8_t)(Settings::ESP::espAimbotTargetColor.fCol[3] * 255) : (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[3] * 255), entity == Settings::Aimbot::finalTarget && Settings::ESP::espAimbotTarget ? (uint8_t)(Settings::ESP::espAimbotTargetColor.fCol[0] * 255) : (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[0] * 255), (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[1] * 255), entity == Settings::Aimbot::finalTarget && Settings::ESP::espAimbotTarget ? (uint8_t)(Settings::ESP::espAimbotTargetColor.fCol[2] * 255) : (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[2] * 255)));
 					else if (Settings::ESP::espShapeInt == 1)
 						DrawEspBox3D(hisEyePos, hisPos, entity->EyeAngles().y, D3DCOLOR_ARGB((uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[3] * 255), (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[0] * 255), (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[1] * 255), (uint8_t)(Settings::ESP::espBoundingBoxColor.fCol[2] * 255)));
 				}

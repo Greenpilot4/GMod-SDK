@@ -63,7 +63,8 @@ namespace ConfigSystem
 		j["ESP"]["espDormant"] = Settings::ESP::espDormant;
 		j["ESP"]["espBoundingBox"] = Settings::ESP::espBoundingBox;
 		j["ESP"]["espBoundingBoxColor"] = to_jsonfcol(Settings::ESP::espBoundingBoxColor.fCol);
-		j["ESP"]["espBoundingBoxTargetColor"] = to_jsonfcol(Settings::ESP::espBoundingBoxColorTarget.fCol);
+		j["ESP"]["espAimbotTarget"] = Settings::ESP::espAimbotTarget;
+		j["ESP"]["espBoundingBoxTargetColor"] = to_jsonfcol(Settings::ESP::espAimbotTargetColor.fCol);
 		j["ESP"]["espHealthBar"] = Settings::ESP::espHealthBar;
 		j["ESP"]["espName"] = Settings::ESP::espName;
 		j["ESP"]["weaponText"] = Settings::ESP::weaponText;
