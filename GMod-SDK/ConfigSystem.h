@@ -64,7 +64,7 @@ namespace ConfigSystem
 		j["ESP"]["espBoundingBox"] = Settings::ESP::espBoundingBox;
 		j["ESP"]["espBoundingBoxColor"] = to_jsonfcol(Settings::ESP::espBoundingBoxColor.fCol);
 		j["ESP"]["espAimbotTarget"] = Settings::ESP::espAimbotTarget;
-		j["ESP"]["espBoundingBoxTargetColor"] = to_jsonfcol(Settings::ESP::espAimbotTargetColor.fCol);
+		j["ESP"]["espAimbotTargetColor"] = to_jsonfcol(Settings::ESP::espAimbotTargetColor.fCol);
 		j["ESP"]["espHealthBar"] = Settings::ESP::espHealthBar;
 		j["ESP"]["espName"] = Settings::ESP::espName;
 		j["ESP"]["weaponText"] = Settings::ESP::weaponText;
@@ -183,6 +183,8 @@ namespace ConfigSystem
 			Settings::ESP::espDormant = j["ESP"]["espDormant"];
 			Settings::ESP::espBoundingBox = j["ESP"]["espBoundingBox"];
 			from_jsonfcol(j["ESP"]["espBoundingBoxColor"], Settings::ESP::espBoundingBoxColor.fCol);
+			Settings::ESP::espAimbotTarget = j["ESP"]["espAimbotTarget"];
+			from_jsonfcol(j["ESP"]["espAimbotTargetColor"], Settings::ESP::espAimbotTargetColor.fCol);
 			Settings::ESP::espHealthBar = j["ESP"]["espHealthBar"];
 			Settings::ESP::espName = j["ESP"]["espName"];
 			Settings::ESP::weaponText = j["ESP"]["weaponText"];
