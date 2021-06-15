@@ -151,6 +151,7 @@ namespace Settings {
 		bool espDormant;
 		bool espBoundingBox;
 		Color espBoundingBoxColor(255, 255, 255);
+		Color espBoundingBoxColorTarget(255, 255, 255);
 		bool espHealthBar;
 		bool espName;
 		bool weaponText;

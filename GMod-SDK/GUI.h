@@ -107,6 +107,7 @@ void DrawVisuals()
 			InsertCheckbox("Health", Settings::ESP::espHealthBar);
 
 			InsertCheckbox("Name", Settings::ESP::espName);
+			InsertColorPicker("##Bounding box target color", Settings::ESP::espBoundingBoxColorTarget.fCol, false);
 
 			InsertCheckbox("Weapon name", Settings::ESP::weaponText);
 

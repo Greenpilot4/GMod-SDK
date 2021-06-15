@@ -117,19 +117,6 @@ HRESULT __stdcall hkPresent(IDirect3DDevice9* pDevice, CONST RECT* pSourceRect, 
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
 	ImGui::GetStyle().Colors[ImGuiCol_WindowBg] = ImColor(9, 8, 9,255);
-
-	ImGui::SetNextWindowPos(ImVec2(0.f, 0.f));
-	ImGui::SetNextWindowSize(ImVec2(143.f, 34.f));
-	ImGui::BeginMenuBackground("Credits window", nullptr, ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove);
-	{
-		ImGui::ColorBar("rainbowBar2", ImVec2(55.f, 2.f));
-		style->ItemSpacing = ImVec2(4, 2);
-		style->WindowPadding = ImVec2(4, 4);
-		ImGui::NewLine();
-		ImGui::SameLine(15.f);
-		ImGui::Text("Coded by t.me/Gaztoof");
-	}
-	ImGui::End();
 	
 	/*// GOD I KNOW I SHOULDN'T DO THAT ITS AWFUL.
 	static char* _SetCursorPos = (char*)GetProcAddress(GetModuleHandleA("user32.dll"), "SetCursorPos");
